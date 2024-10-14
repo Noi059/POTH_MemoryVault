@@ -1,0 +1,218 @@
+/* Font Import */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('Galmuri11.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Styles */
+body {
+    font-family: 'CustomFont', Arial, sans-serif;
+    background-image: url('backimage.png'); /* 이미지 경로를 여기에 넣으세요 */
+    background-size: cover; /* 배경 이미지를 전체 화면에 맞추기 */
+    background-position: top; /* 배경 이미지를 가운데 정렬 */
+    background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
+    margin: 0;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: url('pointer.png'), auto; /* 기본 커서 이미지 설정 */
+}
+
+/* Header */
+h3 {
+    font-size: 1em;
+    color: #FFD900;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+/* Left Section (Images and Text) */
+.left-section {
+    width: 53%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, min-content); /* 두 개의 고정된 너비 설정 */
+    gap: 20px;
+    padding-top: 0px;
+}
+
+.left-section img {
+    width: 270px; /* 고정된 너비를 설정 */
+    height: auto; /* 이미지의 비율을 유지하며 높이를 자동으로 설정 */
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000;
+    margin: 0; /* 이미지를 가운데 정렬하지 않고 간격을 줄임 */
+}
+
+/* Right Section (Form Inputs) */
+.right-section {
+    width: 35%;
+    background-color: #ffd900;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 60px;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+}
+
+.right-section label {
+    display: block;
+    font-weight: regular;
+    margin-bottom: 0px;
+    background-color: #000;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    cursor: url('pointer.png'), auto;
+}
+
+.right-section input[type="text"] {
+    font-family: 'CustomFont', Arial, sans-serif;
+    width: 405px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    border-radius: 0px;
+    font-size: 1em;
+    cursor: url('pointer.png'), auto;
+}
+
+.right-section textarea {
+    font-family: 'CustomFont', Arial, sans-serif;
+    width: 405px;
+    height: 75px; /* 원하는 높이로 설정 */
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    border-radius: 0px;
+    font-size: 1em;
+    cursor: url('pointer.png'), auto;
+}
+
+.right-section input[type="color"] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    border: 2px solid #000;
+    cursor: url('pointer.png'), auto;
+}
+
+/* Button Section */
+.button-section {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-section input[type="button"] {
+    width: 200px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    font-size: 0;
+    background-color: transparent;
+    transition: transform 0.3s ease-in-out; /* 트랜지션 효과 추가 */
+    cursor: url('pointer.png'), auto;
+}
+
+/* Button Images (Dummy Paths) */
+.reset-button {
+    background-image: url('button_1.png'); /* Replace with your image path */
+}
+
+.save-button {
+    background-image: url('button_2.png'); /* Replace with your image path */
+}
+
+/* Hover Effect */
+.button-section input[type="button"]:hover {
+    opacity: 0.8;
+}
+
+/* Bouncing Image */
+.bouncing-image {
+    position: absolute; /* 절대 위치를 사용해 화면 내에서 자유롭게 이동 */
+    width: 100px; /* 이미지의 너비를 설정 */
+    height: 100px; /* 이미지의 높이를 설정 */
+    left: 0; /* 초기 위치 (왼쪽) */
+    top: 0; /* 초기 위치 (위쪽) */
+    z-index: 10; /* bouncing image가 앞에 나오도록 z-index를 높은 값으로 설정 */
+    cursor: url('pointer.png'), auto;
+}
+
+.bouncing-image img {
+    width: 100%; /* 이미지의 크기를 부모 요소에 맞춤 */
+    height: 100%; /* 이미지의 크기를 부모 요소에 맞춤 */
+    border-radius: 50%; /* 이미지를 원형으로 만들기 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 추가 */
+}
+
+/* Draggable Images */
+.draggable-image {
+    position: absolute; /* 절대 위치 */
+    width: 100px; /* 이미지의 너비 */
+    
+    cursor: move; /* 커서를 이동 아이콘으로 설정 */
+    top: 20px; /* 상단에서 20px 떨어진 위치에 배치 */
+    cursor: url('pointer.png'), auto;
+}
+
+/* 이미지 크기 조정 */
+.draggable-image img {
+    width: 100%; /* 컨테이너의 너비에 맞추기 */
+    height: 100%; /* 컨테이너의 높이에 맞추기 */
+    object-fit: cover; /* 비율을 유지하며 컨테이너를 채우기 */
+}
+
+/* 각 이미지를 가로로 배치 */
+.draggable-image:nth-child(1) {
+    left: 20px; /* 첫 번째 이미지는 왼쪽에서 20px 떨어진 위치 */
+}
+
+.draggable-image:nth-child(2) {
+    left: 150px; /* 두 번째 이미지는 왼쪽에서 130px 떨어진 위치 (이미지 너비 + 10px 간격) */
+}
+
+.draggable-image:nth-child(3) {
+    left: 280px; /* 세 번째 이미지는 왼쪽에서 240px 떨어진 위치 */
+}
+
+.draggable-image:nth-child(4) {
+    left: 410px; /* 네 번째 이미지는 왼쪽에서 350px 떨어진 위치 */
+}
+
+.draggable-image:nth-child(5) {
+    left: 540px; /* 다섯 번째 이미지는 왼쪽에서 460px 떨어진 위치 */
+}
+
